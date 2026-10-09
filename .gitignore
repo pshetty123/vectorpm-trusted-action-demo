@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# Streamlit secrets: this demo needs none, and none may be committed
+.streamlit/secrets.toml
+
+# Local artefacts
+*.log
+.DS_Store
+test-results/
+screenshots/
+
+# Only the vendored, read-only fixture DB ships; nothing else
+*.db
+*.sqlite
+*.sqlite3
+!vendor/trust-layer/fixtures/flowpilot_reservoir.db
+.env
+.env.*

@@ -1,0 +1,81 @@
+{
+  "policy_name": "flowpilot-trust-policy",
+  "policy_version": "1.0.0",
+  "_note": "Fictional identities and actions for the FlowPilot demo. Nothing here maps to a real person, customer or system.",
+
+  "settings": {
+    "max_packet_age_hours": 168,
+    "min_evidence_for_l2": "MEDIUM",
+    "min_evidence_for_l3": "MEDIUM"
+  },
+
+  "actions": {
+    "feedback.classify": {
+      "description": "Tag a piece of customer feedback with a theme in the internal triage queue.",
+      "scope": "internal",
+      "reversible": true,
+      "risk": "low",
+      "customer_facing": false,
+      "requires_evidence": false
+    },
+    "review.add_internal_note": {
+      "description": "Attach an internal note to a decision review draft.",
+      "scope": "internal",
+      "reversible": true,
+      "risk": "low",
+      "customer_facing": false,
+      "requires_evidence": true
+    },
+    "roadmap.change_priority": {
+      "description": "Move an initiative up or down the internal roadmap.",
+      "scope": "internal",
+      "reversible": true,
+      "risk": "consequential",
+      "customer_facing": false,
+      "requires_evidence": true
+    },
+    "reservoir.record_decision": {
+      "description": "Record a decision in institutional memory (simulated only; no write-back in this MVP).",
+      "scope": "internal",
+      "reversible": false,
+      "risk": "consequential",
+      "customer_facing": false,
+      "requires_evidence": true
+    },
+    "customer.commit_release_date": {
+      "description": "Promise a customer that a feature ships by a specific date.",
+      "scope": "external",
+      "reversible": false,
+      "risk": "consequential",
+      "customer_facing": true,
+      "requires_evidence": true
+    }
+  },
+
+  "principals": {
+    "agent.feedback-triage": {"kind": "agent", "display_name": "Feedback Triage Agent"},
+    "agent.decision-analyst": {"kind": "agent", "display_name": "Decision Analyst Agent"},
+    "agent.sales-assist": {"kind": "agent", "display_name": "Sales Assist Agent"},
+    "human.ana-ortiz": {"kind": "human", "display_name": "Ana Ortiz, Group PM (fictional)"},
+    "human.sam-reyes": {"kind": "human", "display_name": "Sam Reyes, Sales Lead (fictional)"}
+  },
+
+  "grants": [
+    {"principal": "agent.feedback-triage", "action_type": "feedback.classify", "permissions": ["recommend", "prepare", "execute"]},
+    {"principal": "agent.decision-analyst", "action_type": "review.add_internal_note", "permissions": ["recommend", "prepare", "execute"]},
+    {"principal": "agent.decision-analyst", "action_type": "roadmap.change_priority", "permissions": ["recommend", "prepare"]},
+    {"principal": "agent.decision-analyst", "action_type": "reservoir.record_decision", "permissions": ["recommend", "prepare"]},
+    {"principal": "agent.sales-assist", "action_type": "customer.commit_release_date", "permissions": ["recommend", "prepare", "execute"]},
+    {"principal": "human.ana-ortiz", "action_type": "roadmap.change_priority", "permissions": ["approve"]},
+    {"principal": "human.ana-ortiz", "action_type": "reservoir.record_decision", "permissions": ["approve"]},
+    {"principal": "human.sam-reyes", "action_type": "customer.commit_release_date", "permissions": ["approve"]}
+  ],
+
+  "prohibitions": [
+    {
+      "principal_kind": "agent",
+      "action_type": "customer.commit_release_date",
+      "reason": "Agents may never make delivery commitments to customers. Release dates are committed by a human through the release process."
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "note": "Byte-identical copies of the tested prototypes. Do not edit; re-run scripts/sync_vendor.py.",
+  "files": {
+    "trust-layer/trust_layer/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "trust-layer/trust_layer/schemas.py": "fb74b8502494a8b630e156c3ab74233f0e2d6579eef1ee2978448d5da347d4ee",
+    "trust-layer/trust_layer/policy.py": "30a602849a7347865e34f7defdb177e509ac02a18ec3943bae8ed778d3b5918d",
+    "trust-layer/trust_layer/integrity.py": "25dccb7cf4d9b237457c7c2ff57b078b7cfbed017b914fcaa83066e5ab74e891",
+    "trust-layer/trust_layer/evaluator.py": "82337a9af7f96dd2d571124787e83298cb142fc029d69c0d106e18c8f3d1d3f4",
+    "trust-layer/trust_layer/audit.py": "4181a05856d3c530f0ad7c0c94a049302bb93dabde358c4cc44bcb85ceff718d",
+    "trust-layer/trust_layer/simulator.py": "130b9df5589cabb0127ce27c1119dce80a476347c6dd9979118e3334365f8f2f",
+    "trust-layer/trust_layer/service.py": "d38e75348510c277dbe56cc9971218ad3e6ee10ed0189b24fcf1861ecbb291ee",
+    "trust-layer/trust_layer/scenarios.py": "cdb67cd0d1733afb5190126473c0a3b7367159697641cbcf7096f3b53f178cf8",
+    "trust-layer/trust_layer/adapters/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "trust-layer/trust_layer/adapters/vectorpm.py": "49a745d3a54fe129b9401adcdd5b0f98d8eec6f64fd5f13875de95977b88d446",
+    "trust-layer/policy/flowpilot_policy.v1.json": "b1676e9d7a916bcf5741396fd902d90cd23822e915addab60e610e00b451d4ec",
+    "trust-layer/fixtures/flowpilot_reservoir.db": "e7df04076a5940fd91390e43c80f2b302699cf43642415042c3dee1ea366b5bf",
+    "trust-layer/fixtures/MANIFEST.json": "bfb2efeaa73a23839a3ab6f3013c7179515aae11ec40acae0f4bf06b40900ec1",
+    "experiments/reservoir-decision-review/backend/app/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "experiments/reservoir-decision-review/backend/app/schemas/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "experiments/reservoir-decision-review/backend/app/schemas/context_source.py": "a0212e28ae1d2e01d4b01f1df21ba4faa243102c39aa0d90aa9be7c772d17704",
+    "experiments/reservoir-decision-review/backend/app/schemas/synthesis.py": "dc65d18c28eed0d0e91b8bcfb10b38ee9d630845dccbb022443b3c9507d55bf6",
+    "experiments/reservoir-decision-review/backend/app/schemas/challenger.py": "1037141bf5aa335adc2216fa4700e1caadf554e0a898d8fff3412d78043da9ed",
+    "experiments/reservoir-decision-review/backend/app/schemas/validators.py": "181142ce71059f482b982ae9418438605500e127b2d57fb50b17355a64ddbd19",
+    "experiments/reservoir-decision-review/backend/app/storage/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "experiments/reservoir-decision-review/backend/app/storage/db.py": "db5cfa04de39fe9dcb6ab1a5af159a036d7bb8b7610318024c907dfe5ba35932",
+    "experiments/reservoir-decision-review/backend/app/storage/source_repo.py": "c1415a5a737e3d2a8de7b52dc588219b4477a14a3ba3f789dbcbcc088a22c05b",
+    "experiments/reservoir-decision-review/backend/app/synthesis/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "experiments/reservoir-decision-review/backend/app/synthesis/evidence_strength.py": "1828c87cdbfb17c68adbbf427ca59376fddcd15bd602f5146eb967565a4deacb"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "description": "Read-only copy of the fictional FlowPilot Reservoir experiment database. Do not edit.",
+  "copied_from": "experiments/reservoir-decision-review/backend/var/reservoir_experiment.db",
+  "copied_at": "2026-10-08",
+  "source_sha256": "e7df04076a5940fd91390e43c80f2b302699cf43642415042c3dee1ea366b5bf",
+  "fixture_sha256": "e7df04076a5940fd91390e43c80f2b302699cf43642415042c3dee1ea366b5bf"
+}

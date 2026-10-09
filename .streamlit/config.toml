@@ -1,0 +1,33 @@
+# Streamlit configuration for local runs and Streamlit Community Cloud.
+# Python version is chosen in the Cloud deploy dialog (Advanced settings), not here.
+
+[theme]
+base = "dark"
+primaryColor = "#2DD4BF"
+backgroundColor = "#0B1220"
+secondaryBackgroundColor = "#141A26"
+textColor = "#E6EAF2"
+
+[server]
+headless = true
+# The demo accepts no uploads.
+maxUploadSize = 1
+# Defaults, pinned so a host or future default change can't loosen them.
+enableXsrfProtection = true
+enableCORS = true
+enableStaticServing = false
+
+[browser]
+gatherUsageStats = false
+
+[client]
+# Visitors get the viewer menu only: no rerun/settings/developer options.
+toolbarMode = "viewer"
+# "none": the browser shows a generic message; tracebacks and exception details
+# go to the server log only. (The boolean `false` is deprecated and means
+# "stacktrace", which would expose tracebacks publicly.)
+showErrorDetails = "none"
+
+[runner]
+# Don't render bare expressions; every element on the page is explicit.
+magicEnabled = false
